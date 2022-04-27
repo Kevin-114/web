@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="picture.jpg">
+        <style type="text/css">
+            a:hover {
+                color: #8fdd19;  
+            }
+        </style>
+    </head>
+    <body onload="time()">
+        <p><img src="patrick.jpg" width="300" height="300"></p>
+        <p>我是黃昱翔，高中畢業於<a href="https://www.hs.ntnu.edu.tw/">師大附中</a>
+            現在就讀<a href="https://web.ee.ntu.edu.tw/">台大電機系</a>   
+        </p>
+        <p>我的興趣是<a href="https://www.nba.com/warriors/">打籃球</a>、
+            <a href="https://www.facebook.com/ntumusicaward/">唱歌</a>、
+            <a href="https://www.ymsnp.gov.tw/main_ch/index.aspx">爬山</a>
+        </p>
+        
+        <p><audio controls loop autoplay ><source src="Red Swan.mp3" ></audio></p>
+        <p id="current"></p>
+    </body>
+    
+</html>
+
+<script>
+    function time() {
+        NowDate = new Date();
+        year = NowDate.getFullYear();
+        month = NowDate.getMonth() + 1;
+        day = NowDate.getDate();
+        hr = NowDate.getHours();
+        min = NowDate.getMinutes();
+        sec = NowDate.getSeconds();
+        document.getElementById('current').innerHTML = month + '-' + day + '-' + year + ' ' + hr + ':' + min + ':' + sec;
+        setTimeout('time()', 1000);
+    }
+</script>
